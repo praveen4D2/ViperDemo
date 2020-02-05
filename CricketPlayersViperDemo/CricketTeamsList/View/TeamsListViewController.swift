@@ -10,21 +10,50 @@ import UIKit
 
 class TeamsListViewController: UIViewController {
 
+    /// MARK : - Storyboard outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    /// MARK : - Custom Outlets
+    var countriesList = [TeamCellModel]()
+    var presenter:TeamsListPresenterProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setupTableView()
+        TeamsListWireframe.createTeamsListModule(teamsListRef: self)
+        presenter?.viewDidLoad()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupTableView(){
+        self.tableView.register(UINib(nibName: "TeamsTableViewCell", bundle: nil), forCellReuseIdentifier: "TeamsTableViewCell")
     }
-    */
 
 }
+
+extension TeamsListViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.countriesList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TeamsTableViewCell", for: indexPath) as! TeamsTableViewCell
+        cell.item = self.countriesList[indexPath.row]
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+}
+
+
+extension TeamsListViewController : TeamsListViewProtocol{
+    func showTeams(with teams: [TeamCellModel]) {
+        print(teams)
+        self.countriesList = teams
+        self.tableView.reloadData()
+    }
+}
+
+

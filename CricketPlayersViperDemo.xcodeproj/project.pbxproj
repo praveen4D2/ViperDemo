@@ -9,12 +9,21 @@
 /* Begin PBXBuildFile section */
 		C6C1827323E94178004C75B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1827223E94178004C75B7 /* AppDelegate.swift */; };
 		C6C1827523E94178004C75B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1827423E94178004C75B7 /* SceneDelegate.swift */; };
-		C6C1827723E94178004C75B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1827623E94178004C75B7 /* ViewController.swift */; };
 		C6C1827A23E94178004C75B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C1827823E94178004C75B7 /* Main.storyboard */; };
 		C6C1827C23E9417C004C75B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6C1827B23E9417C004C75B7 /* Assets.xcassets */; };
 		C6C1827F23E9417C004C75B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C1827D23E9417C004C75B7 /* LaunchScreen.storyboard */; };
 		C6C1828A23E9417C004C75B7 /* CricketPlayersViperDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1828923E9417C004C75B7 /* CricketPlayersViperDemoTests.swift */; };
 		C6C1829523E9417C004C75B7 /* CricketPlayersViperDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1829423E9417C004C75B7 /* CricketPlayersViperDemoUITests.swift */; };
+		C6CFADE323EA70EA00448C39 /* TeamsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADE223EA70EA00448C39 /* TeamsListModel.swift */; };
+		C6CFADE523EA72C400448C39 /* TeamsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADE423EA72C400448C39 /* TeamsListViewController.swift */; };
+		C6CFADE823EA796100448C39 /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADE623EA796100448C39 /* TeamsTableViewCell.swift */; };
+		C6CFADE923EA796100448C39 /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CFADE723EA796100448C39 /* TeamsTableViewCell.xib */; };
+		C6CFADEC23EA7DA500448C39 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADEB23EA7DA500448C39 /* TableViewCell.swift */; };
+		C6CFADF323EA81D300448C39 /* TeamsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADF223EA81D300448C39 /* TeamsListProtocols.swift */; };
+		C6CFADF523EA825400448C39 /* TeamsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADF423EA825400448C39 /* TeamsListInteractor.swift */; };
+		C6CFADF823EA838F00448C39 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADF723EA838F00448C39 /* Services.swift */; };
+		C6CFADFA23EA95EB00448C39 /* TeamsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADF923EA95EB00448C39 /* TeamsListPresenter.swift */; };
+		C6CFADFC23EAB12400448C39 /* TeamsListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CFADFB23EAB12400448C39 /* TeamsListWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +47,6 @@
 		C6C1826F23E94178004C75B7 /* CricketPlayersViperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricketPlayersViperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C1827223E94178004C75B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C1827423E94178004C75B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6C1827623E94178004C75B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6C1827923E94178004C75B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6C1827B23E9417C004C75B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6C1827E23E9417C004C75B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,20 @@
 		C6C1829023E9417C004C75B7 /* CricketPlayersViperDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricketPlayersViperDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C1829423E9417C004C75B7 /* CricketPlayersViperDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricketPlayersViperDemoUITests.swift; sourceTree = "<group>"; };
 		C6C1829623E9417C004C75B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6CFADE223EA70EA00448C39 /* TeamsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListModel.swift; sourceTree = "<group>"; };
+		C6CFADE423EA72C400448C39 /* TeamsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListViewController.swift; sourceTree = "<group>"; };
+		C6CFADE623EA796100448C39 /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
+		C6CFADE723EA796100448C39 /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
+		C6CFADEB23EA7DA500448C39 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C6CFADEE23EA7E8800448C39 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		C6CFADEF23EA7E9000448C39 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		C6CFADF023EA7E9B00448C39 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		C6CFADF123EA7EA400448C39 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		C6CFADF223EA81D300448C39 /* TeamsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListProtocols.swift; sourceTree = "<group>"; };
+		C6CFADF423EA825400448C39 /* TeamsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListInteractor.swift; sourceTree = "<group>"; };
+		C6CFADF723EA838F00448C39 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		C6CFADF923EA95EB00448C39 /* TeamsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListPresenter.swift; sourceTree = "<group>"; };
+		C6CFADFB23EAB12400448C39 /* TeamsListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsListWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +121,12 @@
 		C6C1827123E94178004C75B7 /* CricketPlayersViperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C6CFADF623EA836F00448C39 /* Serevices */,
+				C6CFADED23EA7E0B00448C39 /* Font */,
+				C6CFADEA23EA7D9300448C39 /* HelperClass */,
+				C6C182A223E9419E004C75B7 /* CricketTeamsList */,
 				C6C1827223E94178004C75B7 /* AppDelegate.swift */,
 				C6C1827423E94178004C75B7 /* SceneDelegate.swift */,
-				C6C1827623E94178004C75B7 /* ViewController.swift */,
 				C6C1827823E94178004C75B7 /* Main.storyboard */,
 				C6C1827B23E9417C004C75B7 /* Assets.xcassets */,
 				C6C1827D23E9417C004C75B7 /* LaunchScreen.storyboard */,
@@ -126,6 +151,96 @@
 				C6C1829623E9417C004C75B7 /* Info.plist */,
 			);
 			path = CricketPlayersViperDemoUITests;
+			sourceTree = "<group>";
+		};
+		C6C182A223E9419E004C75B7 /* CricketTeamsList */ = {
+			isa = PBXGroup;
+			children = (
+				C6C182A323E941EE004C75B7 /* View */,
+				C6C182A523E94200004C75B7 /* Interactor */,
+				C6C182A423E941F3004C75B7 /* Presenter */,
+				C6C182A623E94215004C75B7 /* Entity */,
+				C6C182A723E94225004C75B7 /* WireFrame */,
+				C6C182A823E94236004C75B7 /* Protocols */,
+			);
+			path = CricketTeamsList;
+			sourceTree = "<group>";
+		};
+		C6C182A323E941EE004C75B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADE423EA72C400448C39 /* TeamsListViewController.swift */,
+				C6CFADE623EA796100448C39 /* TeamsTableViewCell.swift */,
+				C6CFADE723EA796100448C39 /* TeamsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C6C182A423E941F3004C75B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADF923EA95EB00448C39 /* TeamsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C6C182A523E94200004C75B7 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADF423EA825400448C39 /* TeamsListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C6C182A623E94215004C75B7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADE223EA70EA00448C39 /* TeamsListModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C6C182A723E94225004C75B7 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADFB23EAB12400448C39 /* TeamsListWireframe.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		C6C182A823E94236004C75B7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADF223EA81D300448C39 /* TeamsListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C6CFADEA23EA7D9300448C39 /* HelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADEB23EA7DA500448C39 /* TableViewCell.swift */,
+			);
+			path = HelperClass;
+			sourceTree = "<group>";
+		};
+		C6CFADED23EA7E0B00448C39 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADF123EA7EA400448C39 /* Roboto-Light.ttf */,
+				C6CFADF023EA7E9B00448C39 /* Roboto-Regular.ttf */,
+				C6CFADEF23EA7E9000448C39 /* Roboto-Medium.ttf */,
+				C6CFADEE23EA7E8800448C39 /* Roboto-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		C6CFADF623EA836F00448C39 /* Serevices */ = {
+			isa = PBXGroup;
+			children = (
+				C6CFADF723EA838F00448C39 /* Services.swift */,
+			);
+			path = Serevices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CFADE923EA796100448C39 /* TeamsTableViewCell.xib in Resources */,
 				C6C1827F23E9417C004C75B7 /* LaunchScreen.storyboard in Resources */,
 				C6C1827C23E9417C004C75B7 /* Assets.xcassets in Resources */,
 				C6C1827A23E94178004C75B7 /* Main.storyboard in Resources */,
@@ -259,8 +375,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6C1827723E94178004C75B7 /* ViewController.swift in Sources */,
+				C6CFADF323EA81D300448C39 /* TeamsListProtocols.swift in Sources */,
+				C6CFADFA23EA95EB00448C39 /* TeamsListPresenter.swift in Sources */,
 				C6C1827323E94178004C75B7 /* AppDelegate.swift in Sources */,
+				C6CFADE323EA70EA00448C39 /* TeamsListModel.swift in Sources */,
+				C6CFADE523EA72C400448C39 /* TeamsListViewController.swift in Sources */,
+				C6CFADFC23EAB12400448C39 /* TeamsListWireframe.swift in Sources */,
+				C6CFADEC23EA7DA500448C39 /* TableViewCell.swift in Sources */,
+				C6CFADF523EA825400448C39 /* TeamsListInteractor.swift in Sources */,
+				C6CFADE823EA796100448C39 /* TeamsTableViewCell.swift in Sources */,
+				C6CFADF823EA838F00448C39 /* Services.swift in Sources */,
 				C6C1827523E94178004C75B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
