@@ -25,7 +25,7 @@ class TeamsTableViewCell: TableViewCell {
         
         guard let model = item as? TeamCellModel else { return  }
         
-        self.lblTeamName.text = model.countryName
+        self.lblTeamName.text = model.countryName.capitalized
     }
 
 }

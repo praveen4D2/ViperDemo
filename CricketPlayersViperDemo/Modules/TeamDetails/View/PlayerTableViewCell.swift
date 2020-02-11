@@ -27,6 +27,11 @@ class PlayerTableViewCell: TableViewCell {
     override func configure(_ item: Any?) {
         guard let player = item as? Player else { return  }
         self.lblPlayerName.text = player.name
+        if player.captain ?? false {
+            self.lblPlayerName.textColor = UIColor.systemPink
+        }else{
+            self.lblPlayerName.textColor = UIColor.black
+        }
     }
     
 }

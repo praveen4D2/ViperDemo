@@ -155,6 +155,15 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		C697E9E023F2A98B00C5130F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C6C182A223E9419E004C75B7 /* CricketTeamsList */,
+				C697E9CF23F2990600C5130F /* TeamDetails */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		C6C1826623E94178004C75B7 = {
 			isa = PBXGroup;
 			children = (
@@ -178,11 +187,10 @@
 		C6C1827123E94178004C75B7 /* CricketPlayersViperDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C697E9CF23F2990600C5130F /* TeamDetails */,
+				C697E9E023F2A98B00C5130F /* Modules */,
 				C6CFADF623EA836F00448C39 /* Serevices */,
 				C6CFADED23EA7E0B00448C39 /* Font */,
 				C6CFADEA23EA7D9300448C39 /* HelperClass */,
-				C6C182A223E9419E004C75B7 /* CricketTeamsList */,
 				C6C1827223E94178004C75B7 /* AppDelegate.swift */,
 				C6C1827423E94178004C75B7 /* SceneDelegate.swift */,
 				C6C1827823E94178004C75B7 /* Main.storyboard */,

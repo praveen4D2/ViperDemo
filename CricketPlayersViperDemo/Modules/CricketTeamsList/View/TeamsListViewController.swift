@@ -24,6 +24,7 @@ class TeamsListViewController: UIViewController {
         self.setupTableView()
         TeamsListWireframe.createTeamsListModule(teamsListRef: self)
         presenter?.viewDidLoad()
+        
     }
     
     func setupTableView(){
