@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+protocol TeamDetailsViewProtocol {
+    func showTeamMembers(with team:TeamCellModel)
+}
+
+protocol TeamDetailsPresenterProtocol {
+    
+    var view:TeamDetailsViewProtocol? { get set }
+    var wireframe: TeamDetailsWireFrameProtocol? { get set }
+    
+    func viewDidLoad()
+    func backBtnPressed(from VC:UIViewController)
+//    var wireframe:
+}
+
+protocol TeamDetailsWireFrameProtocol {
+}
+

@@ -9,6 +9,8 @@
 import Foundation
 
 class TeamsListPresenter:TeamsListPresenterProtocol {
+
+    
     var wireframe: TeamsListWireFrameProtocol?
     var interactor: TeamsListInputInteractorProtocol?
     var view: TeamsListViewProtocol?
@@ -17,7 +19,9 @@ class TeamsListPresenter:TeamsListPresenterProtocol {
         self.loadTeams()
     }
     
-    
+    func getData(input: String) {
+        interactor?.retriveData(input: input)
+    }
     func loadTeams(){
         interactor?.getTeamsList()
     }
@@ -25,8 +29,16 @@ class TeamsListPresenter:TeamsListPresenterProtocol {
 }
 
 extension TeamsListPresenter: TeamsListOutputInteractorProtocol {
+    func didRetriveData(output: String) {
+        view?.showData(with: output)
+    }
+    
     func didFetchTeams(teamsList: [TeamCellModel]) {
         view?.showTeams(with: teamsList)
     }
 }
+
+
+
+
 

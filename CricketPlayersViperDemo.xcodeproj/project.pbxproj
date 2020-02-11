@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C697E9D223F2995E00C5130F /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697E9D123F2995E00C5130F /* TeamDetailsViewController.swift */; };
+		C697E9D523F299E700C5130F /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697E9D323F299E700C5130F /* PlayerTableViewCell.swift */; };
+		C697E9D623F299E700C5130F /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C697E9D423F299E700C5130F /* PlayerTableViewCell.xib */; };
+		C697E9DA23F29F3D00C5130F /* TeamDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697E9D923F29F3D00C5130F /* TeamDetailsPresenter.swift */; };
+		C697E9DD23F29F6A00C5130F /* TeamDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697E9DC23F29F6A00C5130F /* TeamDetailsProtocol.swift */; };
+		C697E9DF23F2A27500C5130F /* TeamDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C697E9DE23F2A27500C5130F /* TeamDetailsWireframe.swift */; };
 		C6C1827323E94178004C75B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1827223E94178004C75B7 /* AppDelegate.swift */; };
 		C6C1827523E94178004C75B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C1827423E94178004C75B7 /* SceneDelegate.swift */; };
 		C6C1827A23E94178004C75B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6C1827823E94178004C75B7 /* Main.storyboard */; };
@@ -44,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C697E9D123F2995E00C5130F /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		C697E9D323F299E700C5130F /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		C697E9D423F299E700C5130F /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		C697E9D923F29F3D00C5130F /* TeamDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsPresenter.swift; sourceTree = "<group>"; };
+		C697E9DC23F29F6A00C5130F /* TeamDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsProtocol.swift; sourceTree = "<group>"; };
+		C697E9DE23F2A27500C5130F /* TeamDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsWireframe.swift; sourceTree = "<group>"; };
 		C6C1826F23E94178004C75B7 /* CricketPlayersViperDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricketPlayersViperDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C1827223E94178004C75B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6C1827423E94178004C75B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +110,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C697E9CF23F2990600C5130F /* TeamDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C697E9DB23F29F5500C5130F /* Protocols */,
+				C697E9D823F29F0E00C5130F /* Presenter */,
+				C697E9D723F29B5600C5130F /* Wireframe */,
+				C697E9D023F2992200C5130F /* View */,
+			);
+			path = TeamDetails;
+			sourceTree = "<group>";
+		};
+		C697E9D023F2992200C5130F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C697E9D123F2995E00C5130F /* TeamDetailsViewController.swift */,
+				C697E9D323F299E700C5130F /* PlayerTableViewCell.swift */,
+				C697E9D423F299E700C5130F /* PlayerTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C697E9D723F29B5600C5130F /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				C697E9DE23F2A27500C5130F /* TeamDetailsWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		C697E9D823F29F0E00C5130F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C697E9D923F29F3D00C5130F /* TeamDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C697E9DB23F29F5500C5130F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C697E9DC23F29F6A00C5130F /* TeamDetailsProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		C6C1826623E94178004C75B7 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +178,7 @@
 		C6C1827123E94178004C75B7 /* CricketPlayersViperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C697E9CF23F2990600C5130F /* TeamDetails */,
 				C6CFADF623EA836F00448C39 /* Serevices */,
 				C6CFADED23EA7E0B00448C39 /* Font */,
 				C6CFADEA23EA7D9300448C39 /* HelperClass */,
@@ -349,6 +407,7 @@
 			files = (
 				C6CFADE923EA796100448C39 /* TeamsTableViewCell.xib in Resources */,
 				C6C1827F23E9417C004C75B7 /* LaunchScreen.storyboard in Resources */,
+				C697E9D623F299E700C5130F /* PlayerTableViewCell.xib in Resources */,
 				C6C1827C23E9417C004C75B7 /* Assets.xcassets in Resources */,
 				C6C1827A23E94178004C75B7 /* Main.storyboard in Resources */,
 			);
@@ -377,14 +436,19 @@
 			files = (
 				C6CFADF323EA81D300448C39 /* TeamsListProtocols.swift in Sources */,
 				C6CFADFA23EA95EB00448C39 /* TeamsListPresenter.swift in Sources */,
+				C697E9DA23F29F3D00C5130F /* TeamDetailsPresenter.swift in Sources */,
 				C6C1827323E94178004C75B7 /* AppDelegate.swift in Sources */,
+				C697E9DF23F2A27500C5130F /* TeamDetailsWireframe.swift in Sources */,
 				C6CFADE323EA70EA00448C39 /* TeamsListModel.swift in Sources */,
 				C6CFADE523EA72C400448C39 /* TeamsListViewController.swift in Sources */,
 				C6CFADFC23EAB12400448C39 /* TeamsListWireframe.swift in Sources */,
+				C697E9D523F299E700C5130F /* PlayerTableViewCell.swift in Sources */,
 				C6CFADEC23EA7DA500448C39 /* TableViewCell.swift in Sources */,
 				C6CFADF523EA825400448C39 /* TeamsListInteractor.swift in Sources */,
 				C6CFADE823EA796100448C39 /* TeamsTableViewCell.swift in Sources */,
+				C697E9DD23F29F6A00C5130F /* TeamDetailsProtocol.swift in Sources */,
 				C6CFADF823EA838F00448C39 /* Services.swift in Sources */,
+				C697E9D223F2995E00C5130F /* TeamDetailsViewController.swift in Sources */,
 				C6C1827523E94178004C75B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,21 +10,55 @@ import UIKit
 
 class TeamDetailsViewController: UIViewController {
 
+    
+    /// Storyboard Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var presenter:TeamDetailsPresenterProtocol?
+    
+    /// Custom Outlets
+    
+    var cellModel:TeamCellModel?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.presenter?.viewDidLoad()
+        self.setupTableView()
+        
+        print("cell model  \(cellModel)")
+        
+    }
 
-        // Do any additional setup after loading the view.
+    private func setupTableView(){
+        self.tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "PlayerTableViewCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+
+}
+
+/// MARK : - UITableViewDelegate
+
+extension TeamDetailsViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.cellModel?.playersList.count ?? 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "PlayerTableViewCell", for: indexPath) as! PlayerTableViewCell
+        cell.item = self.cellModel?.playersList[indexPath.row]
+        return cell
     }
-    */
 
+}
+
+
+extension TeamDetailsViewController: TeamDetailsViewProtocol{
+    func showTeamMembers(with team: TeamCellModel) {
+        cellModel = team
+        self.tableView.reloadData()
+    }
 }

@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class TeamDetailsWireframe: TeamDetailsWireFrameProtocol {
+    
+    class func createTeamDetailsModule(with VC:TeamDetailsViewController, team:TeamCellModel)
+    {
+        let presenter = TeamDetailsPresenter()
+        presenter.team = team
+        VC.presenter = presenter
+        VC.presenter?.view = VC
+        VC.presenter?.wireframe = TeamDetailsWireframe()
+        
+    }
+}

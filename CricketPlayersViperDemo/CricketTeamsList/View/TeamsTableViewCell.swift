@@ -19,11 +19,13 @@ class TeamsTableViewCell: TableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     override func configure(_ item: Any?) {
         
+        guard let model = item as? TeamCellModel else { return  }
+        
+        self.lblTeamName.text = model.countryName
     }
-    
+
 }

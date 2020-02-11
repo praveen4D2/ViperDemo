@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 class TeamsListWireframe: TeamsListWireFrameProtocol {
-    func pushToTeamDetails(with team: TeamCellModel, from VC: UIViewController) {
+    class func pushToTeamDetails(team: TeamCellModel, from VC: UIViewController) {
+        
+        let nextVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "TeamDetailsViewController") as TeamDetailsViewController
+        TeamDetailsWireframe.createTeamDetailsModule(with: nextVC, team: team)
+        VC.navigationController?.pushViewController(nextVC, animated: true)
         
     }
     

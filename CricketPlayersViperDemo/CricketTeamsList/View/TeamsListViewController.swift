@@ -12,6 +12,8 @@ class TeamsListViewController: UIViewController {
 
     /// MARK : - Storyboard outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var txtInput: UITextField!
+    @IBOutlet weak var txtOutput: UITextField!
     
     /// MARK : - Custom Outlets
     var countriesList = [TeamCellModel]()
@@ -27,7 +29,12 @@ class TeamsListViewController: UIViewController {
     func setupTableView(){
         self.tableView.register(UINib(nibName: "TeamsTableViewCell", bundle: nil), forCellReuseIdentifier: "TeamsTableViewCell")
     }
-
+    
+    @IBAction func onSubmit(_ sender: Any) {
+        guard let inputData = self.txtInput.text else { return  }
+        presenter?.getData(input: inputData)
+    }
+    
 }
 
 extension TeamsListViewController : UITableViewDelegate, UITableViewDataSource {
@@ -42,13 +49,18 @@ extension TeamsListViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        TeamsListWireframe.pushToTeamDetails(team: self.countriesList[indexPath.row], from: self)
     }
     
 }
 
 
 extension TeamsListViewController : TeamsListViewProtocol{
+    func showData(with data: String) {
+        print("output data  \(data)")
+        self.txtOutput.text = data
+    }
+    
     func showTeams(with teams: [TeamCellModel]) {
         print(teams)
         self.countriesList = teams
